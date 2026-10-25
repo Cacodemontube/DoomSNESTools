@@ -1,0 +1,270 @@
+0||None
+1|DR|Door Open Wait Close (also monsters)
+2|W1|Door Open Stay
+3|W1|Door Close Stay
+4|W1|Door Open Wait Close
+16|W1|Door Close Wait Open
+26|DR|Door (Blue) Open Wait Close
+27|DR|Door (Yellow) Open Wait Close
+28|DR|Door (Red) Open Wait Close
+29|S1|Door Open Wait Close
+31|D1|Door Open Stay
+32|D1|Door (Blue) Open Stay
+33|D1|Door (Red) Open Stay
+34|D1|Door (Yellow) Open Stay
+42|SR|Door Close Stay
+46|GR|Door Open Stay
+50|S1|Door Close Stay
+61|SR|Door Open Stay
+63|SR|Door Open Wait Close
+75|WR|Door Close Stay
+76|WR|Door Close Stay Open
+86|WR|Door Open Stay
+90|WR|Door Open Wait Close
+99|SR|Door (Blue) Open Stay (fast)
+103|S1|Door Open Stay
+105|WR|Door Open Wait Close (fast)
+106|WR|Door Open Stay (fast)
+107|WR|Door Close Stay (fast)
+108|W1|Door Open Wait Close (fast)
+109|W1|Door Open Stay (fast)
+110|W1|Door Close (fast)
+111|S1|Door Open Wait Close (fast)
+112|S1|Door Open Stay (fast)
+113|S1|Door Close Stay (fast)
+114|SR|Door Open Wait Close (fast)
+115|SR|Door Open Stay (fast)
+116|SR|Door Close Stay (fast)
+117|DR|Door Open Wait Close (fast)
+118|D1|Door Open Stay (fast)
+133|S1|Door (Blue) Open Stay (fast)
+134|SR|Door (Red) Open Stay (fast)
+135|S1|Door (Red) Open Stay (fast)
+136|SR|Door (Yellow) Open Stay (fast)
+137|S1|Door (Yellow) Open Stay (fast)
+5|W1|Floor Raise to Lowest Ceiling
+9|S1|Floor Raise Donut (changes texture)
+14|S1|Floor Raise by 32 (changes texture)
+15|S1|Floor Raise by 24 (changes texture)
+18|S1|Floor Raise to Next Higher Floor
+19|W1|Floor Lower to Highest Floor
+20|S1|Floor Raise to Next Higher Floor (changes texture)
+22|W1|Floor Raise to Next Higher Floor (changes texture)
+23|S1|Floor Lower to Lowest Floor
+24|G1|Floor Raise to Lowest Ceiling
+30|W1|Floor Raise by Shortest Lower Texture
+36|W1|Floor Lower to 8 above Highest Floor
+37|W1|Floor Lower to Lowest Floor (changes texture)
+38|W1|Floor Lower to Lowest Floor
+45|SR|Floor Lower to Highest Floor
+47|G1|Floor Raise to Next Higher Floor (changes texture)
+53|W1|Floor Start Moving Up and Down
+54|W1|Floor Stop Moving
+55|S1|Floor Raise to 8 below Lowest Ceiling (crushes)
+56|W1|Floor Raise to 8 below Lowest Ceiling (crushes)
+58|W1|Floor Raise by 24
+59|W1|Floor Raise by 24 (changes texture)
+60|SR|Floor Lower to Lowest Floor
+64|SR|Floor Raise to Lowest Ceiling
+65|SR|Floor Raise to 8 below Lowest Ceiling (crushes)
+66|SR|Floor Raise by 24 (changes texture)
+67|SR|Floor Raise by 32 (changes texture)
+68|SR|Floor Raise to Next Higher Floor (changes texture)
+69|SR|Floor Raise to Next Higher Floor
+70|SR|Floor Lower to 8 above Highest Floor
+71|S1|Floor Lower to 8 above Highest Floor
+82|WR|Floor Lower to Lowest Floor
+83|WR|Floor Lower to Highest Floor
+84|WR|Floor Lower to Lowest Floor (changes texture)
+87|WR|Floor Start Moving Up and Down
+89|WR|Floor Stop Moving
+91|WR|Floor Raise to Lowest Ceiling
+92|WR|Floor Raise by 24
+93|WR|Floor Raise by 24 (changes texture)
+94|WR|Floor Raise to 8 below Lowest Ceiling (crushes)
+95|WR|Floor Raise to Next Higher Floor (changes texture)
+96|WR|Floor Raise by Shortest Lower Texture
+98|WR|Floor Lower to 8 above Highest Floor
+101|S1|Floor Raise to Lowest Ceiling
+102|S1|Floor Lower to Highest Floor
+119|W1|Floor Raise to Next Higher Floor
+128|WR|Floor Raise to Next Higher Floor
+129|WR|Floor Raise to Next Higher Floor (fast)
+130|W1|Floor Raise to Next Higher Floor (fast)
+131|S1|Floor Raise to Next Higher Floor (fast)
+132|SR|Floor Raise to Next Higher Floor (fast)
+140|S1|Floor Raise by 512
+6|W1|Crusher Start with Fast Damage
+25|W1|Crusher Start with Slow Damage
+57|W1|Crusher Stop
+73|WR|Crusher Start with Slow Damage
+74|WR|Crusher Stop
+77|WR|Crusher Start with Fast Damage
+141|W1|Crusher Start with Slow Damage (silent)
+7|S1|Stairs Raise by 8
+8|W1|Stairs Raise by 8
+100|W1|Stairs Raise by 16 (fast)
+127|S1|Stairs Raise by 16 (fast)
+10|W1|Lift Lower Wait Raise
+21|S1|Lift Lower Wait Raise
+62|SR|Lift Lower Wait Raise
+88|WR|Lift Lower Wait Raise
+120|WR|Lift Lower Wait Raise (fast)
+121|W1|Lift Lower Wait Raise (fast)
+122|S1|Lift Lower Wait Raise (fast)
+123|SR|Lift Lower Wait Raise (fast)
+11|S1|Exit Level
+51|S1|Exit Level (goes to secret level)
+52|W1|Exit Level
+124|W1|Exit Level (goes to secret level)
+12|W1|Light Change to Brightest Adjacent
+13|W1|Light Change to 255
+17|W1|Light Start Blinking
+35|W1|Light Change to 35
+79|WR|Light Change to 35
+80|WR|Light Change to Brightest Adjacent
+81|WR|Light Change to 255
+104|W1|Light Change to Darkest Adjacent
+138|SR|Light Change to 255
+139|SR|Light Change to 35
+40|W1|Ceiling Raise to Highest Ceiling
+41|S1|Ceiling Lower to Floor
+43|SR|Ceiling Lower to Floor
+44|W1|Ceiling Lower to 8 above Floor
+49|S1|Ceiling Lower to 8 above Floor (perpetual slow crusher damage)
+72|WR|Ceiling Lower to 8 above Floor
+48||Scroll Texture Left
+97|WR|Teleport
+39|W1|Teleport
+125|W1|Teleport (monsters only)
+126|WR|Teleport (monsters only)
+175|S1|Door Close Wait Open (30 seconds)
+196|SR|Door Close Wait Open (30 seconds)
+146|W1|Floor Raise Donut (changes texture)
+155|WR|Floor Raise Donut (changes texture)
+191|SR|Floor Raise Donut (changes texture)
+142|W1|Floor Raise by 512
+147|WR|Floor Raise by 512
+158|S1|Floor Raise by Shortest Lower Texture
+159|S1|Floor Lower to Lowest Floor (changes texture)
+160|S1|Floor Raise by 24 (changes texture and effect)
+161|S1|Floor Raise by 24
+176|SR|Floor Raise by Shortest Lower Texture
+177|SR|Floor Lower to Lowest Floor (changes texture)
+178|SR|Floor Raise by 512
+179|SR|Floor Raise by 24 (changes texture and effect)
+180|SR|Floor Raise by 24
+219|W1|Floor Lower to Nearest Floor
+220|WR|Floor Lower to Nearest Floor
+221|S1|Floor Lower to Nearest Floor
+222|SR|Floor Lower to Nearest Floor
+150|WR|Crusher Start (silent)
+164|S1|Crusher Start (fast)
+165|S1|Crusher Start (silent)
+168|S1|Crusher Stop
+183|SR|Crusher Start (fast)
+184|SR|Crusher Start
+185|SR|Crusher Start (silent)
+188|SR|Crusher Stop
+256|WR|Stairs Raise by 8
+257|WR|Stairs Raise by 16 (fast)
+258|SR|Stairs Raise by 8
+259|SR|Stairs Raise by 16 (fast)
+143|W1|Lift Raise by 24 (changes texture)
+144|W1|Lift Raise by 32 (changes texture)
+148|WR|Lift Raise by 24 (changes texture)
+149|WR|Lift Raise by 32 (changes texture)
+162|S1|Lift Perpetual Lowest and Highest Floors
+163|S1|Lift Stop
+181|SR|Lift Perpetual Lowest and Highest Floors
+182|SR|Lift Stop
+211|SR|Lift Raise to Ceiling (instantly)
+212|WR|Lift Raise to Ceiling (instantly)
+227|W1|Lift Raise to Next Highest Floor (fast)
+228|WR|Lift Raise to Next Highest Floor (fast)
+229|S1|Lift Raise to Next Highest Floor (fast)
+230|SR|Lift Raise to Next Highest Floor (fast)
+231|W1|Lift Lower to Next Lowest Floor (fast)
+232|WR|Lift Lower to Next Lowest Floor (fast)
+233|S1|Lift Lower to Next Lowest Floor (fast)
+234|SR|Lift Lower to Next Lowest Floor (fast)
+235|W1|Lift Move to Same Floor Height (fast)
+236|WR|Lift Move to Same Floor Height (fast)
+237|S1|Lift Move to Same Floor Height (fast)
+238|SR|Lift Move to Same Floor Height (fast)
+197|G1|Exit Level
+198|G1|Exit Level (goes to secret level)
+156|WR|Light Start Blinking
+157|WR|Light Change to Darkest Adjacent
+169|S1|Light Change to Brightest Adjacent
+170|S1|Light Change to 35
+171|S1|Light Change to 255
+172|S1|Light Start Blinking
+173|S1|Light Change to Darkest Adjacent
+192|SR|Light Change to Brightest Adjacent
+193|SR|Light Start Blinking
+194|SR|Light Change to Darkest Adjacent
+174|S1|Teleport (also monsters)
+195|SR|Teleport (also monsters)
+207|W1|Teleport (also monsters, silent, same angle)
+208|WR|Teleport (also monsters, silent, same angle)
+209|S1|Teleport (also monsters, silent, same angle)
+210|SR|Teleport (also monsters, silent, same angle)
+243|W1|Teleport to Line With Same Tag (silent, same angle)
+244|WR|Teleport to Line With Same Tag (silent, same angle)
+262|W1|Teleport to Line With Same Tag (silent, reversed angle)
+263|WR|Teleport to Line With Same Tag (silent, reversed angle)
+264|W1|Teleport to Line With Same Tag (monsters only, silent, reversed angle)
+265|WR|Teleport to Line With Same Tag (monsters only, silent, reversed angle)
+266|W1|Teleport to Line With Same Tag (monsters only, silent)
+267|WR|Teleport to Line With Same Tag (monsters only, silent)
+268|W1|Teleport (monsters only, silent)
+269|WR|Teleport (monsters only, silent)
+145|W1|Ceiling Lower to Floor (fast)
+151|WR|Ceiling Raise to Highest Ceiling
+152|WR|Ceiling Lower to Floor (fast)
+166|S1|Ceiling Raise to Highest Ceiling
+167|S1|Ceiling Lower to 8 Above Floor
+186|SR|Ceiling Raise to Highest Ceiling
+187|SR|Ceiling Lower to 8 Above Floor
+199|W1|Ceiling Lower to Lowest Ceiling
+200|W1|Ceiling Lower to Highest Floor
+201|WR|Ceiling Lower to Lowest Ceiling
+202|WR|Ceiling Lower to Highest Floor
+203|S1|Ceiling Lower to Lowest Ceiling
+204|S1|Ceiling Lower to Highest Floor
+205|SR|Ceiling Lower to Lowest Ceiling
+206|SR|Ceiling Lower to Highest Floor
+85||Scroll Texture Right
+214||Scroll Ceiling Accelerates when Sector Changes Height
+215||Scroll Floor Accelerates when Sector Changes Height
+216||Scroll Things Accelerates when Sector Changes Height
+217||Scroll Floor/Things Accelerates when Sector Changes Height
+218||Scroll Wall Accelerates when Sector Changes Height
+245||Scroll Ceiling when Sector Changes Height
+246||Scroll Floor when Sector Changes Height
+247||Scroll Move Things when Sector Changes Height
+248||Scroll Floor/Move Things when Sector Changes Height
+249||Scroll Wall when Sector Changes Height
+250||Scroll Ceiling according to Line Vector
+251||Scroll Floor according to Line Vector
+252||Scroll Move Things according to Line Vector
+253||Scroll Floor, Move Things
+254||Scroll Wall according to Line Vector
+255||Scroll Wall using Sidedef Offsets
+78|SR|Change Texture and Effect to Nearest
+153|W1|Change Texture And Effect
+154|WR|Change Texture And Effect
+189|S1|Change Texture And Effect
+190|SR|Change Texture And Effect
+239|W1|Change Texture and Effect to Nearest
+240|WR|Change Texture and Effect to Nearest
+241|S1|Change Texture and Effect to Nearest
+223||Friction Tagged Sector: Drag < 100, Slide > 100
+224||Wind according to Line Vector
+225||Current according to Line Vector
+226||Wind/Current by Push/Pull Thing In Sector
+242||Create Fake Ceiling and Floor
+260||Translucent (Middle Texture)
+271||Transfer Sky Texture to Tagged Sectors
+272||Transfer Sky Texture to Tagged Sectors (flipped)

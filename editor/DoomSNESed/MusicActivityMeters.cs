@@ -1,0 +1,14 @@
+using System;using System.Drawing;using System.Diagnostics;using System.Linq;using System.Windows.Forms;
+namespace DoomSNESed {
+    public sealed class MusicActivityMeters:Control {
+        readonly Timer timer=new Timer{Interval=33};readonly Stopwatch clock=new Stopwatch();ImportedMusic source;MusicSettings settings;int[] peaks;double duration;Func<double> playbackTime;
+        public MusicActivityMeters(){Dock=DockStyle.Bottom;Height=172;DoubleBuffered=true;BackColor=Theme.Background;ForeColor=Theme.Text;timer.Tick+=delegate{if((playbackTime==null?clock.Elapsed.TotalSeconds:playbackTime())>=duration)Stop();else Invalidate();};}
+        public void StartSource(ImportedMusic input,MusicSettings mapping,double seconds){playbackTime=null;source=input;settings=mapping;peaks=null;duration=seconds;clock.Restart();timer.Start();Invalidate();}
+        public void StartSpc(int[] values,double seconds){playbackTime=null;source=null;peaks=values;duration=seconds;clock.Restart();timer.Start();Invalidate();}
+        public void StartStream(SpcPreviewPlayer player){StartSpc(player.Levels,player.Seconds);playbackTime=()=>player.PlayedSeconds;}
+        public void Stop(){playbackTime=null;clock.Reset();timer.Stop();source=null;peaks=null;Invalidate();}
+        protected override void Dispose(bool disposing){if(disposing)timer.Dispose();base.Dispose(disposing);}
+        protected override void OnPaint(PaintEventArgs e){base.OnPaint(e);bool spc=peaks!=null;int count=spc?8:16;double time=playbackTime==null?clock.Elapsed.TotalSeconds:playbackTime();int[] values=new int[count];string[] notes=Enumerable.Repeat("",count).ToArray();if(spc){int at=(int)(time*50)*8;for(int c=0;c<8;c++)if(at+c<peaks.Length)values[c]=Math.Min(127,peaks[at+c]*127/32768);}else if(source!=null){foreach(var n in source.Notes)if(n.Start<=time&&n.End>time&&(settings==null||!MusicBank.Muted(settings,n))){values[n.Channel]=Math.Max(values[n.Channel],n.Velocity);string[] names={"C","C#","D","D#","E","F","F#","G","G#","A","A#","B"};string name=names[n.Key%12]+(n.Key/12-1);if(notes[n.Channel].Length<14)notes[n.Channel]+=(notes[n.Channel].Length==0?"":" ")+name;}}
+            e.Graphics.DrawString(spc?"SPC voices - actual sample peaks after envelopes / volume":"MIDI channels - note activity; Play source or Play converted to start",Font,Brushes.LightGreen,8,4);int width=Math.Max(12,(Width-16)/count),height=65;for(int c=0;c<count;c++){int x=8+c*width;using(var bg=new SolidBrush(Theme.Raised))e.Graphics.FillRectangle(bg,x,28,width-5,height);int fill=height*values[c]/127;using(var brush=new SolidBrush(values[c]>112?Color.Orange:Color.MediumSeaGreen))e.Graphics.FillRectangle(brush,x,28+height-fill,width-5,fill);e.Graphics.DrawString((c+1).ToString(),Font,Brushes.LightGray,x,94);if(!spc&&notes[c].Length>0)using(var small=new Font(Font.FontFamily,8))e.Graphics.DrawString(notes[c],small,Brushes.LightGreen,new RectangleF(x,116,width-4,45));}}
+    }
+}

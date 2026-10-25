@@ -1,0 +1,81 @@
+{
+    "origin":  "DoomSNESRecomp/src/doom_audio_preview.c and snesrecomp/runner/src; local working-tree snapshot",
+    "files":  [
+                  {
+                      "sha256":  "ffdd124e06037106c4b7660c2132144b30670b5378bdb0e9408eb27c07d32ad9",
+                      "path":  "snes/apu.c"
+                  },
+                  {
+                      "sha256":  "b3d56393b54d4b3b3fb8f9e12b73a7c58339dd44e8c7404b30d9ced07578fea4",
+                      "path":  "snes/spc.c"
+                  },
+                  {
+                      "sha256":  "548425f220bff313c116f7129a2b13f8d4f0dc1398ba0e53da65a002d2d9c785",
+                      "path":  "snes/dsp.c"
+                  },
+                  {
+                      "sha256":  "1778c2221db9857aabf54ead415c881540e7601f6e630bdf4c96df1487c9ad66",
+                      "path":  "snes/dsp_shadow.c"
+                  },
+                  {
+                      "sha256":  "967ed822084a2a76294ca3fa9b03adf42a2a19936f21a63aaab5e528efc2157d",
+                      "path":  "snes/audio_shadow.c"
+                  },
+                  {
+                      "sha256":  "cc9bc93c40e2bff49fbd11c5e04171fd643e0effa67fd7704a71bb13fa8f63b9",
+                      "path":  "audio_trace.h"
+                  },
+                  {
+                      "sha256":  "4b26ea00dd28e8a59b86b570d799f702aff5aca8aa4ae4319d58f9ce6e366a8d",
+                      "path":  "snes/apu.h"
+                  },
+                  {
+                      "sha256":  "28144d62f6727142e1abdd842a2c5bb62b4255d16d85bbe555385429a8bddde3",
+                      "path":  "snes/snes.h"
+                  },
+                  {
+                      "sha256":  "44cb9735ac3407def4b923b91db489157f24694c0bdd2cb92e7e36ac627fcb3f",
+                      "path":  "snes/spc.h"
+                  },
+                  {
+                      "sha256":  "7bf01a065c75587c7372e602543939643d2f12a01a47d5be23da6f306b5bb97f",
+                      "path":  "snes/dsp.h"
+                  },
+                  {
+                      "sha256":  "2209d5df1d737f75913c6033e5c184747f3155785a1da3a5d061f27423d2a9a1",
+                      "path":  "snes/dsp_shadow.h"
+                  },
+                  {
+                      "sha256":  "ac9d1e4c0ec1c3b319e4d116ce46027f927aabc598558c4c8c608cb44d021589",
+                      "path":  "snes/audio_shadow.h"
+                  },
+                  {
+                      "sha256":  "8c387a20e6bc09dc724e64d7b28663704385295a92ef5bda7da358d4cff8b6e1",
+                      "path":  "snes/cpu.h"
+                  },
+                  {
+                      "sha256":  "9e905dd1aa085ad0a32d9ca7c86f9fd22f60f4f7558fd960f8caab4274c9e633",
+                      "path":  "snes/dma.h"
+                  },
+                  {
+                      "sha256":  "55fa607d7a3fb654f899c70b8818e5e69044e426881156775379008592aeef24",
+                      "path":  "snes/ppu.h"
+                  },
+                  {
+                      "sha256":  "3c62732745a3e141d7d3981b068a4cac7518d01387d0a686bc9ef3668973cfae",
+                      "path":  "snes/cart.h"
+                  },
+                  {
+                      "sha256":  "819e528216ed74f8933e0359f14ac57b09c66017258bb4ee99a645ee5e458a41",
+                      "path":  "snes/saveload.h"
+                  },
+                  {
+                      "sha256":  "452bdf9db9df4ce4e9879216ce0bfb0ddaa22f83d64ad8b7c97ca2b8426245f6",
+                      "path":  "types.h"
+                  },
+                  {
+                      "sha256":  "9bc50d7e27508fa357d1988a80551cb051e4b69d90927837da2ad1e9cb45a143",
+                      "path":  "doom_audio_preview.c"
+                  }
+              ]
+}

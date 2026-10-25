@@ -1,0 +1,48 @@
+DoomSNESed 0.6 and DoomSNESconv - Reality Engine tools
+
+This is an independent experimental SNES editor. It is not an official
+release of, or endorsed by, the authors of Ultimate Doom Builder or DoomFX.
+
+The Vector2D and Line2D geometry code is derived from
+UltimateDoomBuilder-latest/Source/Core/Geometry, originally copyright
+2007 Pascal vd Heiden and subsequent contributors. The original copyright
+headers remain in the source. The 3D and map-model constructors have been
+removed from this two-dimensional subset. The editor UI and native SNES
+reader/compiler are new code; this is not the complete upstream editor.
+Upstream: https://github.com/UltimateDoomBuilder/UltimateDoomBuilder
+License: GNU GPL version 3 or later; see licenses/Geometry-GPL-3.0.txt.
+The complete corresponding editor source and build script accompany this test.
+
+Reality Engine binary layouts and conversion behavior were researched from
+Randal Linden's DoomFX source: rle.i, rlobjects.i, rlobjects.a, rllevels.a,
+rlmove.a, exmy.i and ripdoom3.asm. EngineActions.cs transcribes the native
+action classifications from ripdoom3.asm; the platform conversion follows
+that source. DoomFX is copyright Randal Linden, distributed under GNU GPL
+version 3; see licenses/DoomFX-GPL-3.0.txt. No ROM assets are
+embedded in the editor executable. The player supplies the original ROM.
+
+The DoomSNESed icon is generated from the user's Logo2.png.
+
+DoomSNESconv uses the same independently written ROM reader/compiler.
+TextureList.txt and FloorList.txt are copied from Randal Linden's DoomFX
+source/TextureList and source/FLOORLIST (GPL version 3). The converter
+follows ripdoom3.asm texture, colour and object mappings, rage.a campaign
+routing and score.a episode ending selection. DoomSNESconv embeds Logo3.png as its icon and includes no ROM or WAD assets.
+
+PcActions.txt transcribes numbered action descriptions/activation prefixes
+from Ultimate Doom Builder's Doom_linedefs.cfg and Boom_linedefs.cfg,
+GPL-3.0-or-later, under the same upstream license cited above. Closest
+native replacements are approximations, documented in each report.
+The native visibility mask follows DoomFX rlenemies.a REJECT bit indexing.
+DoomSNESconv 0.5 embeds the user's Logo3.png as its Windows icon and branding.
+
+Audio 0.5: the native audio layout was checked against the user's complete
+ArchiveBKUP backup: HD/source/spmus2.asm, spmus.i, musicdrv.a, rlsound.a;
+HD3/REALITY/MUSIC/doommus.asm, dcom.i and PatchList; and the MUSIC_I/L/T/O.C
+artifacts in HD2/REALITY2/DATA/MUSIC, which match the retail ROM exactly.
+AudioEffects.txt transcribes effect names/indices from the DoomFX archive.
+No music, samples, driver binary or other ROM/PC-WAD assets are embedded.
+The MIDI/MUS parser, BRR encoder and music emitter are new C# implementations.
+Berlioz sequence commands were also cross-checked against the independent
+SNESSculpt decoder: https://github.com/turboboy215/SPC2MID/tree/main/SNESSculpt
+No code from that decoder is copied into these tools.
