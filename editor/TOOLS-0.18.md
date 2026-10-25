@@ -26,8 +26,6 @@ The local DoomFX and ArchiveBKUP sources were compared. `doom-fx-reference/sourc
 
 This release additionally shares complete encoded strips contained inside newly packed longer strips, following MKWALL's byte-stream search principle. It retains the 0.17 minimum packet encoder and native column reuse. It does not claim to reproduce the old tool's complete bank-global overlap algorithm or to use a new runtime texture format.
 
-The supplied Duke3d.sfc was decoded as a source-linked ROM. Many replacement textures are smaller than retail, while others are larger. Texture 52 uses 12,843 stored bytes in Duke3d, compared with 11,463 in retail and 27,967 in the supplied Icon ROM. Different artwork has different native costs. Duke3d's source-linked engine remains emulator/hardware-only; optimizing its art does not make that engine compatible with the native recompiler.
-
 ## Measured Icon texture example
 
 For the supplied Icon texture 52, estimates after optimal column encoding and identical-column sharing are:

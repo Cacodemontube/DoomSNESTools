@@ -81,6 +81,8 @@ Copy-Item -LiteralPath "$PSScriptRoot/TOOLS-0.8.md" -Destination "$OutputDirecto
 Copy-Item -LiteralPath "$PSScriptRoot/TOOLS-0.7.md" -Destination "$OutputDirectory/DOOMSNES-TOOLS-0.7.md"
 Copy-Item -LiteralPath "$PSScriptRoot/TOOLS-0.6.md" -Destination "$OutputDirectory/DOOMSNES-TOOLS-0.6.md"
 Copy-Item -Path "$toolsRoot/licenses/*" -Destination "$OutputDirectory/licenses" -Force
+Copy-Item -LiteralPath "$PSScriptRoot/MUSIC-TRANSITION-FIX.md" -Destination "$OutputDirectory/DOOMSNES-TOOLS-MUSIC-TRANSITION-FIX.md"
+Copy-Item -LiteralPath "$PSScriptRoot/CAMPAIGN-STORAGE-FIX.md" -Destination "$OutputDirectory/DOOMSNES-TOOLS-CAMPAIGN-STORAGE-FIX.md"
 Write-Output "Built $OutputDirectory/DoomSNESed.exe and DoomSNESconv.exe"
 
 

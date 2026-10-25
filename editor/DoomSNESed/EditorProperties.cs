@@ -20,7 +20,9 @@ namespace DoomSNESed {
     public class FlatTextureConverter:Int32Converter {
         public override bool GetStandardValuesSupported(ITypeDescriptorContext c) {return true;}
         public override bool GetStandardValuesExclusive(ITypeDescriptorContext c) {return true;}
-        public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext c) {return new StandardValuesCollection(Context.Rom.FlatTextures);}
+        public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext c) {return new StandardValuesCollection(AssetDialog.FlatChoices(Context.Rom,true));}
+        public override object ConvertTo(ITypeDescriptorContext c,CultureInfo culture,object value,Type destination){if(destination==typeof(string)&&value is int&&(int)value==255)return "255 / Sky";return base.ConvertTo(c,culture,value,destination);}
+        public override object ConvertFrom(ITypeDescriptorContext c,CultureInfo culture,object value){if(value is string&&((string)value).Trim().Equals("255 / Sky",StringComparison.OrdinalIgnoreCase))return 255;return base.ConvertFrom(c,culture,value);}
     }
     public class FloorColorConverter:FlatTextureConverter {
         public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext c) {return new StandardValuesCollection(Context.Rom.FlatTextures.Where(id=>id!=255).ToArray());}

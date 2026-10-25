@@ -17,7 +17,7 @@ namespace DoomSNESed {
         }
         public Bitmap CopyImage() {return bitmap==null?null:new Bitmap(bitmap);}
         public void ShowFlat(Rom rom,int id) {
-            Clear();caption=id==255?"Ceiling sky (255)":"Solid surface colour "+id;
+            Clear();if(id==255)ShowWall(rom,0);caption=id==255?"Ceiling sky (255)":"Solid surface colour "+id;
             if(id!=255) {bitmap=new Bitmap(32,32);using(Graphics g=Graphics.FromImage(bitmap))g.Clear(Palette(rom,id));}Invalidate();
         }
         public void Clear() {if(bitmap!=null)bitmap.Dispose();bitmap=null;caption="Select a wall or sector to preview its ROM asset.";Invalidate();}

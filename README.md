@@ -8,6 +8,19 @@ Independent Windows tools for editing Doom SNES ROMs and converting Doom 1 PWAD 
 
 DoomSNESRecomp is **not required** to build or use the tools, including music/sound conversion and preview. The user supplies a compatible Doom SNES ROM for the game's assets and sound driver. ROMs, soundbanks and game media are not included in this source project.
 
+## Download DoomSNESTools V0.01
+
+Download the [Windows x64 bundle](https://github.com/Cacodemontube/DoomSNESTools/releases/download/v0.01/DoomSNESTools-V0.01-Windows-x64.zip) from the [v0.01 release](https://github.com/Cacodemontube/DoomSNESTools/releases/tag/v0.01). Extract the entire ZIP and run `DoomSNESed.exe` or `DoomSNESconv.exe`. Keep the audio DLL, editor-data and licenses alongside the programs. Windows x64 and .NET Framework 4.x are required. Supply your own compatible Doom SNES ROM.
+
+This release includes the latest maintenance changes (file version 0.1.0.2):
+
+- Reclaim disabled campaign maps' ROM allocations for graphics, music, samples and text, with recovered space shown in the report and storage meter.
+- Restore shared SPC instrument tables between imported songs and original title/intermission music.
+- Stop and clean up previews when switching music imports or instrument assignments.
+- Show Sky (255) with a thumbnail at the top of the ceiling picker.
+
+The bundle includes both applications and their corresponding standalone source. Source is also available as a separate release ZIP. macOS, Linux and Windows x86 binaries are not included.
+
 ## Build on Windows x64
 
 Requirements: .NET Framework 4.x, CMake, Ninja and a MinGW-w64 x64 C compiler. Tools are found on PATH; a standard `C:\msys64\mingw64\bin` installation is also detected.

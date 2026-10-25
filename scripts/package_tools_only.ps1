@@ -32,14 +32,21 @@ foreach($folder in @('editor','native','scripts','tests','licenses')){
 foreach($name in @('CMakeLists.txt','build.ps1','README.md','README.txt','LICENSE','.gitignore','Logo2.png','Logo3.png')){Copy-Item -LiteralPath (Join-Path $toolsRoot $name) -Destination "$stage/source"}
 Copy-Item -LiteralPath "$toolsRoot/README.md" -Destination $stage
 @'
-DoomSNESed + DoomSNESconv v0.01 - Windows x64 test bundle
+DoomSNESTools V0.01 - Windows x64
 
 Extract the whole ZIP. Run DoomSNESed.exe or DoomSNESconv.exe.
 Keep DoomSNESAudio.dll, editor-data and licenses beside the executables.
 Windows x64 and .NET Framework 4.x are required.
 Supply your own compatible Doom SNES ROM. No ROM or PWAD is included.
 
-0.20 drops monster-only blocking and masked portal textures by default.
+Latest maintenance build (file version 0.1.0.2):
+- Unchecked campaign maps are removed and their space reused for assets.
+- Original intermission/title music restores its shared SPC tables.
+- Preview cleanup between imports and a visible Sky (255) picker.
+Read DOOMSNES-TOOLS-CAMPAIGN-STORAGE-FIX.md and
+DOOMSNES-TOOLS-MUSIC-TRANSITION-FIX.md for these updates.
+
+Earlier development changes: 0.20 drops monster-only blocking and masked portal textures by default.
 zoo.wad still needs sector simplification: 233 sectors exceed the 205 limit.
 0.19 internal sector numbers and the complete native
 texture catalog in both tools, including all ten switch off/on pairs.
@@ -49,7 +56,7 @@ Read DOOMSNES-TOOLS.md for details and earlier notes for other features.
 This ZIP includes the editor and converter. DoomSNESRecomp is distributed
 separately; native Play integration requires that program to be installed.
 Exported SFC files can be used with a compatible emulator.
-Source-linked RL5934/Duke3d engines remain emulator/hardware-only.
+Source-linked engine variants may require an emulator or hardware.
 
 source/ contains the complete standalone source, including native audio.
 Music/sound conversion and preview do not require DoomSNESRecomp.
@@ -59,9 +66,9 @@ powershell -ExecutionPolicy Bypass -File source/build.ps1 -Platform x64
 See source/CMakeLists.txt and source/native/src/doom_audio_preview.c for the audio DLL.
 Physical SNES hardware has not been tested.
 '@ | Set-Content -LiteralPath "$stage/START HERE.txt" -Encoding UTF8
-'DoomSNES tools v0.01 Windows x64' | Set-Content -LiteralPath "$stage/VERSION"
+'DoomSNES tools v0.01 maintenance 0.1.0.2 Windows x64' | Set-Content -LiteralPath "$stage/VERSION"
 $revision='standalone project; native provenance in source/native/UPSTREAM.json'
-"game-source=$revision`nsource=self-contained source snapshot`nplatform=Windows-x64`ntools=0.1.0.0" | Set-Content "$stage/BUILD-INFO.txt"
+"game-source=$revision`nsource=self-contained source snapshot`nplatform=Windows-x64`ntools=0.1.0.2" | Set-Content "$stage/BUILD-INFO.txt"
 $forbidden=Get-ChildItem $stage -Recurse -File | Where-Object {$_.Extension -in @('.sfc','.smc','.srm','.sav','.sned','.dse','.wad','.spc','.wav','.mid','.mus') -or $_.Name -in @('rom.cfg','disc.cfg','config.ini','keybinds.ini','state.toml')}
 if($forbidden){throw 'Unexpected ROM or personal state in package'}
 $manifest=Get-ChildItem $stage -Recurse -File | Where-Object Name -ne 'SHA256SUMS.txt' | Sort-Object FullName | ForEach-Object {

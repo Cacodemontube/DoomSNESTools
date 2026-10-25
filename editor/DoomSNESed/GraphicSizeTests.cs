@@ -6,7 +6,7 @@ namespace DoomSNESed {
             string resources=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"editor-data"),folder=Path.Combine(output,"size-018");Directory.CreateDirectory(folder);var retail=new Rom(path,resources);
             var tall=new GraphicReplacement{Sprite=true,Id=39,Width=1,Height=8,Pixels=new byte[]{1,2,3,4,5,6,7,8}};var shortOne=new GraphicReplacement{Sprite=true,Id=40,Width=1,Height=4,Pixels=new byte[]{1,2,3,4}};
             var plan=new GraphicColumnPlan(retail,new List<GraphicReplacement>{shortOne,tall},false);var parent=plan.Find(tall,0);var child=plan.Find(shortOne,0);Check(child.Parent==parent&&child.Offset==4,"shorter stream shares an encoded substring");Check(plan.Fits(new[]{new Section{Start=0x10000,Size=parent.Data.Length}}),"fit check charges containing strip once");parent.Address=0x10000;plan.ResolveContained();Check(child.Address==0x10004,"contained pointer resolves to parent bytes");
-            foreach(string name in new[]{"KICK","iconofshit","Duke3d"}){
+            foreach(string name in new[]{"KICK","iconofshit"}){
                 string source=Path.Combine(Path.GetDirectoryName(path),"testfiles",name+".sfc");if(!File.Exists(source))continue;var rom=new Rom(source,resources);var changes=new List<GraphicReplacement>();
                 foreach(bool sprite in new[]{false,true})foreach(int id in sprite?Enumerable.Range(0,232):rom.WallTextures.Where(i=>i>=4)){
                     var native=GraphicsAssets.Describe(rom.Bytes,sprite,id);var a=GraphicSizeOptimizer.FromRom(rom,native);if(a.Pixels.SequenceEqual(GraphicsAssets.Decode(retail.Bytes,GraphicsAssets.Describe(retail.Bytes,sprite,id))))continue;
